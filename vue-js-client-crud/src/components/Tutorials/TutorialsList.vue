@@ -41,11 +41,7 @@
         <div>
           <label><strong>Status:</strong></label> {{ currentTutorial.published ? "Published" : "Pending" }}
         </div>
-        <a class="badge badge-warning"
-          :href="'/tutorials/' + currentTutorial.id"
-        >
-          Edit
-        </a>
+        <router-link class="btn btn-primary" :to="{ name: 'tutorials-details', params: { id: currentTutorial.id }}">Edit</router-link>
       </div>
       <div v-else>
         <br />
